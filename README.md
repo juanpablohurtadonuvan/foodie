@@ -1,73 +1,63 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+Foodie - Food Prediction by Juan Pablo Hurtado
+==============================================
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+![Foodie](https://www.tastingtable.com/img/gallery/what-makes-restaurant-burgers-taste-different-from-homemade-burgers-upgrade/l-intro-1662064407.jpg)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Descripción
+-----------
 
-## Description
+Esta aplicación de backend desarrollada en Nest.js ofrece una funcionalidad completa para recomendar restaurantes y platos basados en el presupuesto, el gusto y la cocina del usuario. Utiliza una base de datos MongoDB para almacenar la información de los restaurantes y platos, lo que garantiza un almacenamiento eficiente y escalable.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Además, la aplicación cuenta con un sólido conjunto de pruebas unitarias implementadas utilizando el framework de pruebas Jest. Esto asegura la calidad del código y permite realizar pruebas exhaustivas para detectar posibles errores o fallos en la lógica de recomendación.
 
-## Installation
+Funcionalidades Principales
+---------------------------
 
-```bash
-$ npm install
-```
+*   Recomendación de restaurantes y platos según el presupuesto, el gusto y la cocina preferida.
+*   Almacenamiento eficiente de la información utilizando una base de datos MongoDB.
+*   Pruebas unitarias exhaustivas utilizando el framework de pruebas Jest.
 
-## Running the app
+Instalación
+-----------
 
-```bash
-# development
-$ npm run start
+    $ npm install
 
-# watch mode
-$ npm run start:dev
+### Ejecutar la Aplicación
 
-# production mode
-$ npm run start:prod
-```
+    # Modo de desarrollo
+    $ npm run start:dev
+    
+    # Modo de producción
+    $ npm run start:prod
 
-## Test
+### Pruebas
 
-```bash
-# unit tests
-$ npm run test
+    # Ejecutar pruebas unitarias
+    $ npm run test
+    
+    # Generar informe de cobertura de pruebas
+    $ npm run test:cov
 
-# e2e tests
-$ npm run test:e2e
+Rutas
+-----
 
-# test coverage
-$ npm run test:cov
-```
+La aplicación ofrece las siguientes rutas para consultar y recomendar restaurantes y platos:
 
-## Support
+*   GET /restaurants - Obtener todos los restaurantes.
+*   GET /restaurants/:id - Obtener un restaurante por su ID.
+*   POST /restaurants - Crear un nuevo restaurante.
+*   PUT /restaurants/:id - Actualizar un restaurante existente.
+*   DELETE /restaurants/:id - Eliminar un restaurante existente.
+*   POST /restaurants/recommendationsByCuisine - Obtener restaurantes recomendados según las preferencias de cocina y gusto.
+*   POST /restaurants/getRestaurantsByCuisine - Obtener restaurantes por tipo de cocina.
+*   POST /restaurants/recommendationsByPrice - Obtener restaurantes recomendados según el presupuesto.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Base de Datos
+-------------
 
-## Stay in touch
+La aplicación utiliza una base de datos MongoDB para almacenar la información de los restaurantes y platos. Asegúrate de tener MongoDB instalado y configurado antes de ejecutar la aplicación.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Soporte
+-------
 
-## License
-
-Nest is [MIT licensed](LICENSE).
+Nest.js es un proyecto de código abierto con licencia MIT. Puede crecer gracias a los patrocinadores y el apoyo de los increíbles colaboradores. Si deseas unirte, por favor [lee más aquí](https://docs.nestjs.com/support).
