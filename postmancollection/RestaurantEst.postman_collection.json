@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "2bfbc7ce-621c-4ab9-add2-d644d18afbcd",
+		"name": "RestaurantEst",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Restaurant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Sushi Master\",\r\n  \"location\": \"Calle Tokio 123\",\r\n  \"cuisine\": [\"Japonesa\"],\r\n  \"menuItems\": [\r\n    {\r\n      \"name\": \"Nigiri Sushi\",\r\n      \"description\": \"Arroz cubierto con pescado fresco\",\r\n      \"price\": 10,\r\n      \"dietaryRestrictions\": [],\r\n      \"allergens\": [\"pescado\"]\r\n    },\r\n    {\r\n      \"name\": \"Tempura\",\r\n      \"description\": \"Mariscos y verduras fritas en tempura\",\r\n      \"price\": 12,\r\n      \"dietaryRestrictions\": [],\r\n      \"allergens\": [\"mariscos\", \"gluten\"]\r\n    }\r\n  ],\r\n  \"tipo_comida\": \"Japonesa\",\r\n  \"rango_precio\": \"medio-alto\",\r\n  \"distancia\": 6,\r\n  \"valoracion\": 4.2,\r\n  \"distancia_maxima\": 5,\r\n  \"valoracion_minima\": 4\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/restaurants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recommendations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"favoriteCuisines\": [\r\n        \"Colombiana\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/restaurants/recommendationsByCuisine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"restaurants",
+						"recommendationsByCuisine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recommendationsByPrice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"favoriteCuisines\": [\r\n        \"Colombiana\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/restaurants/recommendationsByCuisine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"restaurants",
+						"recommendationsByCuisine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Restaurants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Mi restaurante favorito\",\r\n  \"address\": \"Calle 123, Ciudad X\",\r\n  \"phone\": \"+1 555 123 4567\",\r\n  \"cuisine\": \"Italiana\",\r\n  \"menu\": [\r\n    {\r\n      \"name\": \"Pizza Margherita\",\r\n      \"price\": 12.5,\r\n      \"description\": \"Pizza con tomate, mozzarella y albahaca\"\r\n    },\r\n    {\r\n      \"name\": \"Pasta Carbonara\",\r\n      \"price\": 11,\r\n      \"description\": \"Pasta con huevo, queso pecorino, panceta y pimienta negra\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/restaurants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by cuisine",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cuisine\": \"Colombiana\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/restaurants/getRestaurantsByCuisine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"restaurants",
+						"getRestaurantsByCuisine"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
